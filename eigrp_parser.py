@@ -51,7 +51,7 @@ def main():
 		for col_index, cell_value in enumerate(row, start=1):
 			if isinstance(cell_value, list):
 				cell_value = ';'.join(cell_value)
-			elif isinstance(cell_value, int) and cell_value.isnumeric():
+			elif cell_value.isnumeric():
 				cell_value = int(cell_value)
 			ws.cell(row=row_index, column=col_index).value = cell_value
 
